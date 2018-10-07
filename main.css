@@ -78,8 +78,8 @@ h2 {
 	color: #F6E7CF;
 	text-align: left;
 	font-weight: 400;
-	margin-left: 50%;
-	padding: 20px 0;	
+	padding: 20px 30px;
+	margin-bottom: 40px;
 }
 
 h3 {
@@ -216,6 +216,9 @@ header {
 	grid-template-rows: repeat(3, 1fr);
 }
 
+.code div > a {
+}
+
 
 .input { 
 	height: 30px;
@@ -245,5 +248,31 @@ header {
 	height: 25px;
 	background-color: #393939;
 	color: white;
+}
+.code {
+	display: grid;
+	grid-template-rows: 70px auto 70px auto;
+	background-color: #5B544F;
+	margin-top: 20px;
+}
+
+.code > div {
+	width: 100%;
+	background-color: #000000;
+}
+.code > div > p {
+	padding: 10px 30px;
+	color: #2F8700;
 	
+}
+
+.lookcode-back {
+	display: block;
+	width: 200px;
+	text-align: center;
+	margin: 20px;
+	padding-top: 5px;
+	height: 25px;
+	background-color: #393939;
+	color: white;
 }

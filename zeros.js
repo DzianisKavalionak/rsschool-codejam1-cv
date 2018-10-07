@@ -9,9 +9,6 @@ function zeros() {
  }
  
 function advzeros() {
-
-
-
    let base = +document.getElementById("base2").value;
    let number = +document.getElementById("number2").value;
    let factorialn = document.getElementById("factorialn");
