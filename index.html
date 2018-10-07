@@ -1,134 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Dzianis Kavalionak Resume</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-	<script src="zeros.js"></script>
-	<header>
-		<img class="header_bg" src="img/bg_photo.jpg" alt="s">
-		<ul class="header_menu">
-			<li><a href="#about-me">О мне</a></li>
-			<li><a href="#example-tasks">Примеры работ</a></li>
-			<li><a href="#task">Код</a></li>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Dzianis Kavalionak Resume</title>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<script src="zeros.js"></script>
+		<header>
+			<img class="header_bg" src="img/bg_photo.jpg" alt="s" width="1024" height="500">
+			<ul class="header_menu">
+				<li><a href="#Contacts">Контакты</a></li>
+				<li><a href="#example-tasks">Примеры работ</a></li>
+				<li><a href="#code1">Код</a></li>
 			</ul>	
-		<div class="header_about">
-			<h1>Добро пожаловать!</h1>
-			<p> Меня зовут Денис Ковалёнок. Я учусь на курсах <a href="https://rollingscopes.com/" target="_blank">Rolling Scopes</a> frond-end разработке. 
-				На этом сайте Вы можете узнать про меня подробнее... </p>
+			<div class="header_about">
+				<h1>Добро пожаловать!</h1>
+				<p> Меня зовут Денис Ковалёнок. Я учусь на курсах <a href="https://rollingscopes.com/" target="_blank">Rolling Scopes</a> frond-end разработке. 
+					На этом сайте Вы можете узнать про меня подробнее... </p>
 			</div>
 		</header>
-	<div class="about-me">
-		<h2 id="about-me">О мне</h2>
-		<div>
-			<img src="img/20140104_145918.jpg" alt="photo">
-			<ul class="personal_info">
-				<li><span>Имя:</span><p>Денис</p></li>
-				<li><span>Фамилия:</span><p>Ковалёнок</p></li>
-				<li><span>Дата рождения:</span><p>01.09.1988</p></li>
-				<li><span>Город проживания:</span><p>Минск</p></li>
-				<li><span>Телефон:</span><p>+375 44 7715981</p></li>
-				<li><span>e-mail:</span><p>nereidy4@gmail.com</p></li>	
-				<li><span>Telegram:</span><p>@Nere1D</p></li>
-				<li><span>Facebook:</span><p>https://www.facebook.com/dzianis.kavalionak</p></li>
-			</ul>
+		<div class="about-me">
+			<h2 id="Contacts">Контакты</h2>
+			<div>
+				<img src="img/20140104_145918.jpg" alt="photo" width="400" height="253">
+				<ul class="personal_info">
+					<li><span>Имя:</span><p>Денис</p></li>
+					<li><span>Фамилия:</span><p>Ковалёнок</p></li>
+					<li><span>Дата рождения:</span><p>01.09.1988</p></li>
+					<li><span>Город проживания:</span><p>Минск</p></li>
+					<li><span>Телефон:</span><p>+375 44 7715981</p></li>
+					<li><span>e-mail:</span><p>nereidy4@gmail.com</p></li>	
+					<li><span>Telegram:</span><p>@Nere1D</p></li>
+					<li><span>Facebook:</span><p>https://www.facebook.com/dzianis.kavalionak</p></li>
+				</ul>
 			</div>
 		</div>
-	<div class="tasks">
-		<h2 id="example-tasks">Примеры работ</h2>
-		<div class="task" id="task-1">
+		<div class="tasks">
+			<h2 id="example-tasks">Примеры работ</h2>
+			<div class="task" id="task-1">
+				<div>
+					<p><input class= "input" type="text" placeholder="Введите число в десятичнй СИ" id="number"></p>
+					<p><input class= "button" type="button" value="Высчитать" onclick="zeros()"><span class="ansver" id="factorial-zeros"></span></p>
+				</div>
+				<div>
+					<h4>Расчитайте количество нулей в конце записи факториала в десятичной системе исчисления. Введите число.</h4>
+					<a href="#code1"><div class="lookcode">Посмотреть код.</div></a>		
+				</div>	
+			</div>		
+				<div class="task" id="task-2">
+				<div>
+					<p><input class="input" placeholder="Введите любую СИ" id="base2"> <input class= "input" placeholder="Введите число" id="number2"></p>
+					<p><input class="button" type="button" value="Высчитать" onclick="advzeros()"><span class="ansver" id="factorialn"></span></p>
+				</div>
+				<div>
+					<h4>Расчитайте количество нулей в конце записи факториала в любой СИ. Введите число произвольную СИ и число.</h4>
+					<a href="#code2"><div class="lookcode">Посмотреть код.</div></a>		
+				</div>	
+			</div>		
+		</div>	
+		<div class="code">
+			<h2 id="code1">Количество нулей у факториала</h2>
 			<div>
-				<p><input class= "input" type="text" placeholder="Введите число в десятичнй СИ" id="number"></p>
-				<p><input class= "button" type="button" value="Высчитать" onclick="zeros()"><span class="ansver" id="factorial-zeros"></span></p>
+				<p>function zeros() { </p>
+				<p>let number = +document.getElementById("number").value;</p>
+				<p> let factorial_zeros = document.getElementById("factorial-zeros");</p>
+				<p> let zeros = 0;</p>
+				<p> for (let i = 5; number/i >= 1; i) { </p>
+				<p>  zeros += Math.floor(number/i);</p>
+				<p>  i = i * 5;}</p>
+				<p> factorial_zeros.innerHTML = ('Ответ: ' + zeros);</p>
+				<p>}</p>
+				<a href="#task-1"><div class="lookcode-back">Вернуться к решению</div></a>
 			</div>
+			<h2 id="code2">Количество нулей у факториала в любой СИ.</h2>
 			<div>
-				<h4>Расчитайте количество нулей в конце записи факториала в десятичной системе исчисления. Введите число.</h4>
-				<a href="#task"><div class="lookcode" id="task1">Посмотреть код.</div></a>		
+				<p>function advzeros() {</p>
+				<p> let base = +document.getElementById("base2").value;</p>
+				<p> let number = +document.getElementById("number2").value;</p>
+				<p> let factorialn = document.getElementById("factorialn");</p>
+				<p> let [simpleNum, arrs, result, preResult, si, zero] = [0, [], [], [],  base, {}];</p>
+				<p> for (let n = 2; n <= base; n++ ){</p>
+				<p>  simpleNum = si % n;</p>
+				<p>  if(simpleNum === 0){</p>
+				<p>   arrs.push(n);</p>
+				<p>   si = si / n;</p>
+				<p>   n--;</p>
+				<p>  }</p>
+				<p> }</p>
+				<p> for (let n = 0; n < arrs.length; n++ ){</p>
+				<p>   let tempNumber = number;</p>
+				<p>  preResult[n] = 0;</p>
+				<p>  for (tempNumber; tempNumber > 0; tempNumber) {</p>
+				<p>   tempNumber = Math.floor(tempNumber / arrs[n]);</p>
+				<p>   preResult[n] += tempNumber;</p>
+				<p>  }</p>
+				<p> }</p>
+				<p> preResult.forEach(a => {</p>
+				<p>  (zero[a] !== undefined)? zero[a]++ : zero[a] = 1;</p>
+				<p> });</p>
+				<p> for(let key in zero){</p>
+				<p>  result.push(Math.floor(+key/zero[key]));</p>
+				<p> }</p>
+				<p> factorialn.innerHTML = (result[0]);</p>
+				<p>}</p>
+				<a href="#task-2"><div class="lookcode-back">Вернуться к решению</div></a>
 			</div>	
 		</div>
-		
-			<div class="task" id="task-2">
-			<div>
-				<p><input class="input" placeholder="Введите любую СИ" id="base2"> <input class= "input" placeholder="Введите число" id="number2"></p>
-				<p><input class="button" type="button" value="Высчитать" onclick="advzeros()"><span class="ansver" id="factorialn"></span></p>
-			</div>
-			<div>
-				<h4>Расчитайте количество нулей в конце записи факториала в любой СИ. Введите число произвольную СИ и число.</h4>
-				<a href="#task2"><div class="lookcode" id="task2">Посмотреть код.</div></a>		
-			</div>	
-		</div>
-		
-	</div>
-	
-	<div class="code">
-		<h2 id="task">Количество нулей у факториала</h2>
-		<div>
-			<p>function zeros() { </p>
-			<p>&nbsp let number = +document.getElementById("number").value;</p>
-			<p>&nbsp let factorial_zeros = document.getElementById("factorial-zeros");</p>
-			<p>&nbsp let zeros = 0;</p>
-			<p>&nbsp for (let i = 5; number/i >= 1; i) { </p>
-			<p>&nbsp &nbsp zeros += Math.floor(number/i);</p>
-			<p>&nbsp &nbsp i = i * 5;}</p>
-			<p>&nbsp factorial_zeros.innerHTML = ('Ответ: ' + zeros);</p>
-			<p>}</p>
-			<a href="#task-1"><div class="lookcode-back">Вернуться к решению</div></a>
-		</div>
-		<h2 id="task2">Количество нулей у факториала в любой СИ.</h2>
-		<div>
-			<p>function advzeros() {</p>
-			<p>&nbsp let base = +document.getElementById("base2").value;</p>
-			<p>&nbsp let number = +document.getElementById("number2").value;</p>
-			<p>&nbsp let factorialn = document.getElementById("factorialn");</p>
-			<p>&nbsp let [simpleNum, arrs, result, preResult, si, zero] = [0, [], [], [],  base, {}];</p>
-			<p>&nbsp for (let n = 2; n <= base; n++ ){</p>
-			<p>&nbsp &nbsp simpleNum = si % n;</p>
-			<p>&nbsp &nbsp if(simpleNum === 0){</p>
-			<p>&nbsp &nbsp &nbsp arrs.push(n);</p>
-			<p>&nbsp &nbsp &nbsp si = si / n;</p>
-			<p>&nbsp &nbsp &nbsp n--;</p>
-			<p>&nbsp &nbsp }</p>
-			<p>&nbsp }</p>
-			<p>&nbsp for (let n = 0; n < arrs.length; n++ ){</p>
-			<p>&nbsp &nbsp  let tempNumber = number;</p>
-			<p>&nbsp &nbsp preResult[n] = 0;</p>
-			<p>&nbsp &nbsp for (tempNumber; tempNumber > 0; tempNumber) {</p>
-			<p>&nbsp &nbsp &nbsp tempNumber = Math.floor(tempNumber / arrs[n]);</p>
-			<p>&nbsp &nbsp &nbsp preResult[n] += tempNumber;</p>
-			<p>&nbsp &nbsp }</p>
-			<p>&nbsp }</p>
-			<p>&nbsp preResult.forEach(a => {</p>
-			<p>&nbsp &nbsp (zero[a] !== undefined)? zero[a]++ : zero[a] = 1;</p>
-			<p>&nbsp });</p>
-			<p>&nbsp for(let key in zero){</p>
-			<p>&nbsp &nbsp result.push(Math.floor(+key/zero[key]));</p>
-			<p>&nbsp }</p>
-			<p>&nbsp factorialn.innerHTML = (result[0]);</p>
-			<p>}</p>
-			<a href="#task-2"><div class="lookcode-back">Вернуться к решению</div></a>
-		
-		
-		
-		</div>
-	
-	
-	
-	
-	
-	
-	</div>
-	
-	
-	
-	
-	
-	
-		
-
-
-
-
 	</body>
-	</html>
+</html>
