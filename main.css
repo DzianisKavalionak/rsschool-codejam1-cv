@@ -94,6 +94,8 @@ h4 {
 	color: #F6E7CF;
 	text-align: left;
 	font-weight: 400;
+	padding-right: 30px;
+	padding-bottom: 30px;
 }
 
 
@@ -195,7 +197,7 @@ header {
 .tasks{
 	margin-top: 20px;
 	display: grid;
-	grid-template-rows: 70px 1fr;
+	grid-template-rows: 70px 1fr 1fr;
 	background-color: #5B544F;
 }
 
@@ -203,7 +205,6 @@ header {
 	padding-top: 40px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	height: 200px;
 	border-bottom: 2px solid #FAF0E1;
 }
 
@@ -213,7 +214,7 @@ header {
 
 .task > div {
 	display: grid;
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 }
 
 .code div > a {
@@ -270,7 +271,7 @@ header {
 	display: block;
 	width: 200px;
 	text-align: center;
-	margin: 20px;
+	margin: 20px 30px;
 	padding-top: 5px;
 	height: 25px;
 	background-color: #393939;
