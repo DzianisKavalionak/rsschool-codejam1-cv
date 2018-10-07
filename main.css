@@ -83,7 +83,14 @@ h2 {
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 26px;
+	color: #F6E7CF;
+	text-align: left;
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 22px;
 	color: #F6E7CF;
 	text-align: left;
 	font-weight: 400;
@@ -181,4 +188,62 @@ header {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	color: #F6E7CF;
+}
+
+/* tasks */
+
+.tasks{
+	margin-top: 20px;
+	display: grid;
+	grid-template-rows: 70px 1fr;
+	background-color: #5B544F;
+}
+
+.task {
+	padding-top: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 200px;
+	border-bottom: 2px solid #FAF0E1;
+}
+
+.task > div:first-child {
+	margin-left: 30px;
+}
+
+.task > div {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+}
+
+
+.input { 
+	height: 30px;
+	width: 200px;
+	border: 2px solid #FFEBD7;
+}
+.input:hover {
+	border: 2px solid #EFAF70;
+}
+
+.button {
+	height: 30px;
+	width: 100px;
+	background-color: rgba(224,79,23,1);
+	border: 2px solid #EFA86A;
+}
+.ansver {
+	margin-left: 40px;
+	color: #F6E7CF;
+	font-size: 22px;
+}
+.lookcode {
+	display: block;
+	width: 200px;
+	text-align: center;
+	padding-top: 5px;
+	height: 25px;
+	background-color: #393939;
+	color: white;
+	
 }

@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+	<script src="zeros.js"></script>
 	<header>
 		<img class="header_bg" src="img/bg_photo.jpg" alt="s">
 		<ul class="header_menu">
 			<li><a href="#about-me">О мне</a></li>
-			<li><a href="#">Примеры работ</a></li>
+			<li><a href="#example-tasks">Примеры работ</a></li>
 			<li><a href="#">Полезные ссылки</a></li>
 			</ul>	
 		<div class="header_about">
@@ -34,10 +35,36 @@
 				<li><span>Facebook:</span><p>https://www.facebook.com/dzianis.kavalionak</p></li>
 			</ul>
 			</div>
-		<h3></h3>
-		<p></p>
-		
 		</div>
+	<div class="tasks">
+		<h2 id="example-tasks">Примеры работ</h2>
+		<div class="task">
+			<div>
+				<h4>Введите число в десятичной системе счисления получите ответ.</h4>
+				<p><input class= "input" type="text" placeholder="Введите число в десятичнй СИ" id="number"></p>
+				<p><input class= "button" type="button" value="Высчитать" onclick="zeros()"><span class="ansver" id="factorial-zeros"></span></p>
+			</div>
+			<div>
+				<h3>Количество нулей у факториала</h3>
+				<h4> </h4>
+				<a href="#task"><div class="lookcode" id="task1">Посмотреть код.</div></a>		
+			</div>	
+		</div>
+		
+			<div class="task">
+			<div>
+				<h4>Введите любую систему счисления и число в десятичной СИ</h4>
+				<p><input class="input" placeholder="Введите любую СИ" id="base2"> <input class= "input" placeholder="Введите число" id="number2"></p>
+				<p><input class="button" type="button" value="Высчитать" onclick="advzeros()"><span class="ansver" id="factorialn"></span></p>
+			</div>
+			<div>
+				<h3>Количество нулей у факториала в n'ой системе счисления</h3>
+				<h4> </h4>
+				<a href="#task"><div class="lookcode" id="task2">Посмотреть код.</div></a>		
+			</div>	
+		</div>
+		
+	</div>
 		
 
 
